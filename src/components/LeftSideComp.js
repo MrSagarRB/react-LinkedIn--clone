@@ -2,11 +2,12 @@ import React from "react";
 import { Container } from "@material-ui/core";
 import StopIcon from "@material-ui/icons/Stop";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
+import RecentData from "../recentData";
 
 function LeftSideComp() {
   return (
     <Container>
-      <div className="bg-white flex flex-col w-56 items-center r h-96 mt-10 rounded-md">
+      <div className="bg-white flex flex-col w-56 items-center  h-96 mt-10 rounded-md">
         <img
           className="z-40 rounded-t-md"
           src="https://media-exp1.licdn.com/dms/image/C4D16AQGZ3MQrAYX64w/profile-displaybackgroundimage-shrink_200_800/0/1643628246251?e=1649894400&v=beta&t=0mQ8Mc-D8EGbgvSctrXd2dV8wl8vO300YbZA1DfwSuI"
@@ -47,11 +48,33 @@ function LeftSideComp() {
 
         <div className="border-t-2 w-full flex  items-center hover:bg-gray-200 h-full  hover:rounded-b-md cursor-pointer">
           <h1 className="text-sm text-left px-5 py-2 font-light">
-            
             <BookmarkIcon className="text-gray-600 " /> My Item
           </h1>
         </div>
       </div>
+
+      <div className="bg-white w-56 h-96 mt-2 rounded-md  ">
+        <h1 className="p-3 text-sm">Recent</h1>
+        {RecentData.map((items) => {
+          return (
+            <div className="hover:bg-gray-200 text-sm px-4 py-1">
+              {" "}
+              # {items.tag}{" "}
+            </div>
+          );
+        })}
+       <div className="flex flex-col mt-5 px-3 text-blue-400">
+           <a>Groups</a>
+           <a>Event</a>
+           <a className="flex justify-between"><p> Followed Hashtags</p> <p className="text-2xl"> +</p> </a>
+
+
+
+       </div>
+
+
+      </div>
+
     </Container>
   );
 }
