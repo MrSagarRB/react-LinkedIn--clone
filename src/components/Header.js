@@ -10,12 +10,27 @@ import AppsIcon from '@material-ui/icons/Apps';
 
 
 
+
+
+
 function Header() {
   return <div className='bg-white flex flex-col sm:flex-row justify-between items-center rounded-sm shadow-md sm:px-14'>
  
  <div className='h-full flex flex-row sm:justify-center  items-center p-1 sm:space-x-0 space-x-20'>
     <LinkedInIcon  color='primary' style={{fontSize: 50}} />
-    <TextField id="outlined-basic" label="Search" variant="outlined" size="small"  />
+    <TextField
+     id="outlined-basic" 
+     label="Search" 
+     variant="outlined"
+      size="small"
+     
+      
+      
+     
+    
+    />
+
+    
 
   
 
@@ -58,7 +73,7 @@ function Header() {
 
  <div className=' flex-col items-center hidden sm:inline-block'> 
  <AppsIcon style={{fontSize: 25}} />
- <p className='font-light text-sm'>Work</p>
+ <p className='font-light text-sm'>Work  </p>
  </div> 
 
  <div className='text-center '>
