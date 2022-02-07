@@ -12,7 +12,7 @@ function Header() {
   return (
     <div className="bg-white flex flex-col sm:flex-row justify-between items-center rounded-sm shadow-md sm:px-14">
       <div className="h-full flex flex-row sm:justify-center  items-center p-1 sm:space-x-0 space-x-20">
-        <LinkedInIcon color="primary" style={{ fontSize: 50 }} />
+        <LinkedInIcon style={{ fontSize: 50 }} className="text-cyan-600" />
         <TextField
           id="outlined-basic"
           label="Search"

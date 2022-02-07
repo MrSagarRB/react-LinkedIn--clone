@@ -48,7 +48,7 @@ function LeftSideComp() {
 
         <div className="border-t-2 w-full flex  items-center hover:bg-gray-200 h-full  hover:rounded-b-md cursor-pointer">
           <h1 className="text-sm text-left px-5 py-2 font-light">
-            <BookmarkIcon className="text-gray-600 " /> My Item
+            <BookmarkIcon className="text-gray-600 text-xs" /> My Item
           </h1>
         </div>
       </div>
@@ -63,15 +63,23 @@ function LeftSideComp() {
             </div>
           );
         })}
-       <div className="flex flex-col mt-5 px-3 text-blue-400">
+       <div className="flex flex-col mt-5 px-3 text-blue-400 gap-3">
+        
            <a>Groups</a>
            <a>Event</a>
-           <a className="flex justify-between"><p> Followed Hashtags</p> <p className="text-2xl"> +</p> </a>
+           <a className="flex justify-between"><p> Followed Hashtags</p> <p className="text-2xl text-black"> +</p> </a>
+           </div>
 
+           {RecentData.map((items) => {
+          return (
+            <div className="hover:bg-gray-200 text-sm px-4 py-1">
+              {" "}
+              # {items.tag}{" "}
+            </div>
+          );
+        })}
 
-
-       </div>
-
+     
 
       </div>
 
